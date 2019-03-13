@@ -1,0 +1,8 @@
+{
+    "name": "change_bold_in_xls",
+    "type": "project",
+    "require": {
+        "php": ">=7.0.0",
+        "phpoffice/phpspreadsheet": "~1.1.0"
+    }
+}
