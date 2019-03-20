@@ -36,7 +36,7 @@ foreach ($document->getAllSheets() as $sheet) {
                 foreach ($cellValue->getRichTextElements() as $richTextElement) {
                     $richTextElementText = $richTextElement->getText();
 
-                    $needSetTextElement = main::normalizeElement($richTextElementText, $richTextElement);
+                    $needSetTextElement = main::replaceStyleToTags($richTextElementText, $richTextElement);
 
                     // if need to replace richText element
                     if ($needSetTextElement) {
@@ -48,7 +48,7 @@ foreach ($document->getAllSheets() as $sheet) {
 
             // if cell is string
             if (is_string($cellValue)) {
-                $needSetValue = main::normalizeElement($cellValue, $cell->getStyle());
+                $needSetValue = main::replaceStyleToTags($cellValue, $cell->getStyle());
             }
 
             // if need to set cell value

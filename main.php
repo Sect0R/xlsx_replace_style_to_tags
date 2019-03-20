@@ -7,7 +7,7 @@ class main
      * @param \PhpOffice\PhpSpreadsheet\Style\Style|\PhpOffice\PhpSpreadsheet\RichText\ITextElement $style
      * @return bool
      */
-    public static function normalizeElement(&$text, $style)
+    public static function replaceStyleToTags(&$text, $style)
     {
         if (!$text) {
             return false;
